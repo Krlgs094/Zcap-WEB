@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
-import cl.inacap.ZCapModel.dto.consola;
+import cl.inacap.ZCapModel.dto.Consola;
 
 /**
  * Session Bean implementation class ConsolasDAO
@@ -16,14 +16,9 @@ import cl.inacap.ZCapModel.dto.consola;
 @LocalBean
 public class ConsolasDAO implements ConsolasDAOLocal {
 
-	private static List<consola> consolas = new ArrayList<>();
-    /**
-     * Default constructor. 
-     */
-    public ConsolasDAO() {
-        // TODO Auto-generated constructor stub
-    }
-
+	private static List<Consola> consolas = new ArrayList<>();
+    
+	
 	@Override
 	public void save(Consola consola) {
 		consolas.add(consola);
@@ -44,7 +39,7 @@ public class ConsolasDAO implements ConsolasDAOLocal {
 	@Override
 	public List<Consola> filterByName(String nombre) {
 		// TODO Auto-generated method stub
-		return consolas.stream().filter(c->c.getNombre().contains(nombre).collect(collectors.toList()));
+		return consolas.stream().filter(c->c.getNombre().contains(nombre)).collect(Collectors.toList());
 	}
 
 }

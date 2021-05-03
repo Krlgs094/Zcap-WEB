@@ -2,13 +2,12 @@ package cl.inacap.ZCapModel.dto;
 
 import java.util.List;
 
-public class consola {
+public class Consola {
 	
+		private String nombre;
 		private String marca;
 		private int anioLanzamiento;
-		private List<juego> juegos;
-
-		private String nombre;
+		private List<Juego> juegos;
 		public String getNombre() {
 			return nombre;
 		}
@@ -27,11 +26,11 @@ public class consola {
 		public void setAnioLanzamiento(int anioLanzamiento) {
 			this.anioLanzamiento = anioLanzamiento;
 		}
-		public List<juego> getJuegos() {
+		public List<Juego> getJuegos() {
 			return juegos;
 		}
-		public void setJuegos(List<juego> juegos) {
+		public void setJuegos(List<Juego> juegos) {
 			this.juegos = juegos;
 		}
-		
+
 }

@@ -1,16 +1,15 @@
 package cl.inacap.ZCapModel.dto;
 
-import java.io.Console;
 import java.time.LocalDate;
 
-public class juego {
+public class Juego {
 
 		private String nombre;
 		private String descripcion;
 		private boolean aptoNinios;
 		private int precios;
+		private Consola consola;
 		private LocalDate fechadeLanzamiento;
-		private Console consola;
 		public String getNombre() {
 			return nombre;
 		}
@@ -41,10 +40,11 @@ public class juego {
 		public void setFechadeLanzamiento(LocalDate fechadeLanzamiento) {
 			this.fechadeLanzamiento = fechadeLanzamiento;
 		}
-		public Console getConsola() {
+		public Consola getConsola() {
 			return consola;
 		}
-		public void setConsola(Console consola) {
+		public void setConsola(Consola consola) {
 			this.consola = consola;
 		}
+	
 }
